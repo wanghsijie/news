@@ -28,7 +28,10 @@
 
           <div class="swiper-slide slidescroll">
             <!-- 第三层 分类中的左右滚动 -->
-            <div class="swiper-container banner">
+            <keep-alive>
+              <threeSwipers :one="one"></threeSwipers>
+            </keep-alive>
+            <!-- <div class="swiper-container banner">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="../assets/images/banner1.jpg"></div>
@@ -37,13 +40,15 @@
                 <div class="swiper-slide">
                   <img src="../assets/images/banner3.jpg"></div>
               </div>
-              <!-- <div class="swiper-pagination"></div> -->
-            </div>
+            </div> -->
           </div>
 
           <div class="swiper-slide slidescroll">
             <!-- 第三层 分类中的左右滚动 -->
-            <div class="swiper-container banner">
+            <keep-alive>
+              <threeSwipers :one="two"></threeSwipers>
+            </keep-alive>
+            <!-- <div class="swiper-container banner">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="../assets/images/banner1.jpg"></div>
@@ -52,8 +57,7 @@
                 <div class="swiper-slide">
                   <img src="../assets/images/banner3.jpg"></div>
               </div>
-              <!-- <div class="swiper-pagination"></div> -->
-            </div>
+            </div> -->
           </div>
 
           <div class="swiper-slide slidescroll">
@@ -224,11 +228,35 @@
 </template>
 
 <script>
+import threeSwipers from './threeSwipers';
 export default {
   data () {
     return {
+      one:[{
+        a:'0',
+        img:'../assets/images/product1.png'
+      },{
+        a:'0',
+        img:'../assets/images/product2.png'
+      },{
+        a:'0',
+        img:'../assets/images/product3.png'
+      }],
+      two:[{
+        a:'0',
+        img:'../assets/images/banner1.jpg'
+      },{
+        a:'0',
+        img:'../assets/images/banner2.jpg'
+      },{
+        a:'0',
+        img:'../assets/images/banner3.jpg'
+      }]
     }
-  }
+  },
+  components:{
+    threeSwipers
+  },
 }
 </script>
 
