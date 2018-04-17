@@ -234,13 +234,13 @@ export default {
     return {
       one:[{
         a:'0',
-        img:'../assets/images/product1.png'
+        img:'/static/img/product1.png'
       },{
         a:'0',
-        img:'../assets/images/product2.png'
+        img:'/static/img/product2.png'
       },{
         a:'0',
-        img:'../assets/images/product3.png'
+        img:'/static/img/product3.png'
       }],
       two:[{
         a:'0',

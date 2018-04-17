@@ -1,8 +1,8 @@
 <template>
 	<div class="swiper-container banner">
 		<div class="swiper-wrapper">
-		    <div class="swiper-slide">
-		      	<img src="../assets/images/product1.png"></div>
+		    <div class="swiper-slide" v-for="item in one">
+		      	<img :src="item.img"></div>
 		    <div class="swiper-slide">
 		      	<img src="../assets/images/product2.png"></div>
 		    <div class="swiper-slide">
@@ -15,14 +15,19 @@
 <script>
 export default {
 	// props: ['one'],
+  props: ['one'],
   data () {
     return {
-    	one:[]
     }
+  },
+  computed: {
+    // datas: function () {
+    //   return this.one
+    // }
   },
   created(){
   	console.log('created')
-  	
+  	// console.log(one)
   },
   activated(){
   	console.log('activated')
