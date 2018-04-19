@@ -1,11 +1,16 @@
 'use strict'
 const utils = require('./utils')
 const webpack = require('webpack')
+// 配置文件
 const config = require('../config')
+// webpack 配置合并插件
 const merge = require('webpack-merge')
 const path = require('path')
+// webpack基本配置
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+// 自动生成 html 并且注入到 .html 文件中的插件
+// https://github.com/ampedandwired/html-webpack-plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')

@@ -1,5 +1,8 @@
 <template>
   <div id="top">
+    <div class="bit">
+      
+    </div>
     <div class="swiper-container" id="nav">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -109,5 +112,12 @@ export default {
   margin:0 auto;
   height:3px;
   background:#ff4891;
+}
+.bit{
+  height:1.30667rem;
+  width: 50px;
+  position:absolute;
+  left:0;
+  top:0;
 }
 </style>
